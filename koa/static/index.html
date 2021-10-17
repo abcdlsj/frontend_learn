@@ -1,0 +1,34 @@
+<html>
+    <head>
+    
+    <!-- 引用jQuery -->
+    <script src="/static/js/jquery.min.js"></script>
+    
+    <!-- 引用Vue -->
+    <script src="/static/js/vue.js"></script>
+    
+    <script>
+    // 初始化代码:
+    $(function () {
+        var vm = new Vue({
+            el: '#vm',
+            data: {
+                name: 'Robot',
+                age: 15
+            }
+        });
+        window.vm = vm;
+    });
+    </script>
+    
+    </head>
+    
+    <body>
+    
+        <div id="vm">
+            <p>Hello, {{ name }}!</p>
+            <p>You are {{ age }} years old!</p>
+        </div>
+    
+    </body>
+    <html>
