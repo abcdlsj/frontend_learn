@@ -1,0 +1,26 @@
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Vue ToDoList App</title>
+    <script src="https://cdn.bootcss.com/vue/2.5.16/vue.js"></script>
+</head>
+
+<body>
+<div id="app">
+    <input class="new_todo" v-model="newTodo" @keyup.enter="addTodo"/>
+    <li v-for="todo in Todos"
+        key="todo.id"
+    ><span>{{todo.title}}</span>
+        <input type="button" value="mark done" @click="changeStatus(todo)">
+    </li>
+    <li v-for="(value, key) in Dones"
+        key="key"
+    > {{ value.title + "+" + key }}
+    </li>
+
+</div>
+<script src="todos.js">
+</script>
+</body>
+</html>
