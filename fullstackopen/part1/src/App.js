@@ -1,25 +1,9 @@
 import React from "react";
 
-const Hello = ({name, age}) => {
-  const getBorn = () => new Date().getFullYear() - age
+const App = ({counter}) => {
   return (
     <div>
-      <p>
-        Hello {name}, you are {age} years old, you are born in {getBorn()} year.
-      </p>
-    </div>
-  )
-}
-
-const App = () => {
-  const name = 'Peter'
-  const age = 10
-
-  return (
-    <div>
-      <h1>Greetings</h1>
-      <Hello name="Maya" age={26 + 10} />
-      <Hello name={name} age={age} />
+      {counter}
     </div>
   )
 }
